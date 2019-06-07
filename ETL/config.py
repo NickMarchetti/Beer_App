@@ -1,2 +1,0 @@
-gkey = "AIzaSyAUYI9CGXJ_y-jNodDhwPwiXb3XMX4m0b8"
-mq_key = "xLE6Ap2jWvFCRmBYFCXNAR9xRXNQ7GJ4"

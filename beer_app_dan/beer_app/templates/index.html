@@ -36,8 +36,8 @@
       </div>
     </nav>
     <div class="hero text-center">
-      <h1>Find YOUR Beer!</h1>
-      <p>America's Breweries</p>
+      <h1>Find <u><i>YOUR</u></i> Beer!</h1>
+      <p>Search America's Breweries</p>
     </div>
   
     <div class="container">
@@ -65,7 +65,11 @@
                 <form id="alien_form">
                   <div class="form-group">
                     <div class="row">
-                      <div class = "col-md-3">                          
+                      <div class="col-md-1">
+                      </div>
+                      <div class = "col-md-2">                          
+                        <label for="beer">Beer Name</label>
+                        <input class="form-control" id="beer_name" type="text" placeholder="Beer Name">
                       </div>                        
                       <div class="col-md-2">
                         <label for="state">State</label>
@@ -75,18 +79,28 @@
                         <label for="style">Style</label>
                         <input class="form-control" id="style" type="text" placeholder="Style list">
                       </div>                    
-                      <div class="col-md-2">
-                        <label for="rating">Rating</label>
-                        <input class="form-control" id="rating" type="number" placeholder="Rating list">
+                      <div class="col-md-2">                        
+                        <label for="city">City</label>
+                        <input class="form-control" id="city" type="text" placeholder="city">
                       </div>
-                      <div class="dol-md-3">                        
+                      <div class="col-md-2">                        
+                          <label for="brewery">Brewery</label>
+                          <input class="form-control" id="brewery" type="text" placeholder="Brewery Name">
                       </div>
+                      <div class="col-md-1">
+                        </div>
                     </div>
                     <br><br>
-                    <div class="row">
-                      <div class="col-md-3">
+                    <div class="row"><center>
+                      <div class="col-md-4">
+                          <label for="votes">Beer Votes</label>
+                          <div class="votescontainer">
+                              <input type="range" min="1" max="3000" value="1500" type = "number" class="slider" id="votes">
+                              <p>Votes: <span id="votes_val"></span></p>
+                          </div>                            
+                          <script src="../static/js/Votes_Slider.js"></script>
                       </div>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                           <label for="ABV">ABV</label>
                           <div class="ABVcontainer">
                               <input type="range" min="1" max="25" value="5" type = "number" class="slider" id="ABV">
@@ -94,17 +108,17 @@
                           </div>                            
                           <script src="../static/js/ABV_Slider.js"></script>
                         </div>
-                      <div class="col-md-3">
+                      <div class="col-md-4">
                         <label for="IBU">IBU</label>
                         <div class="IBUcontainer">
                             <input type="range" min="1" max="100" value="50" class="slider" id="IBU">
                             <p>IBUs: <span id="IBU_Val"></span></p>
                         </div>                          
                         <script src ="../static/js/IBU_Slider.js"></script>
-                      </div>
+                      </div></center>
                     </div>
                   </div>
-                  <button id="filter_btn" type="button" value="submit" class="btn btn-default">Filter your beers!</button>
+                  <button id="filter_btn" type="button" value="submit" class="btn btn-default">See all data!</button>
                 </form>
               </div>
             </div>

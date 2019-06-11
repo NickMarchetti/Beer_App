@@ -170,7 +170,7 @@ select {
   font-size: 0.1rem;
   color: white;
   animation: title 1.2s forwards; 
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   animation-direction: alternate;
 }
 
@@ -207,8 +207,29 @@ select {
   width: 80%; /* Width of the outside container */
 }
 
+.ui-beer_name {
+  position: relative;
+  display: inline-block;
+  background-color: #f1f1f1;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.votescontainer {
+  width: 80%; /* Width of the outside container */
+}
+
 .IBUcontainer {
-  width: 100%; /* Width of the outside container */
+  width: 80%; /* Width of the outside container */
 }
 
 /* media queries which will only be activated at specific screen sizes */

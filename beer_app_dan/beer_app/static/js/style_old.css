@@ -151,7 +151,7 @@ select {
 }
 
 #map-id {
-  height : 400px;
+  height : 40px;
   width : 600px;
 }
 
@@ -161,7 +161,6 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../img/beer_map.jpg");
   background-position: bottom center;
 }
 
@@ -204,6 +203,14 @@ select {
 }
 
 .ABVcontainer {
+  width: 80%; /* Width of the outside container */
+}
+
+.votescontainer {
+  width: 80%; /* Width of the outside container */
+}
+
+.IBUcontainer {
   width: 80%; /* Width of the outside container */
 }
 

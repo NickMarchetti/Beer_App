@@ -19,6 +19,7 @@ var flag = 0;  //flag to check if user data was found...or not
 //  Initial population of page with all data
 resetData(); 
 
+
 // Put column header values on the table
 function tableHeaders() {
     var row = tbody.append("tr");
@@ -171,6 +172,16 @@ function filterName(event) {
     flag = 0; //reset flag
 }  //end filterName function
 
+// function getBeers() {
+//     //var beerName = d3.event.target.value.toLowerCase(); // store user-selected data
+//     var beerList = [];
+//     response.forEach(function(beer) {
+//           if (!(beerList.includes(beer.beer_name))) {
+//             beerList.push(beer.beer_name);
+//           }
+//     });  //end filterName function
+//     //console.log("beer list: ", beerList);
+// }
 // Filter by rating
 function filterRating(event) {
     var tbody = d3.select("tbody");     // select the body of the beer table
@@ -299,6 +310,42 @@ function filterIBU() {
 } //end loop to check for match of IBU
 
 //Listeners...
+$(function () {
+    var beerList = [];
+    response.forEach(function(beer) {
+          if (!(beerList.includes(beer.beer_name))) {
+            beerList.push(beer.beer_name);
+          }
+    });  //end filterName function
+    $("#beer_name").autocomplete({
+        source:beerList
+    });
+});
+
+$(function () {
+    var brewList = [];
+    response.forEach(function(beer) {
+          if (!(brewList.includes(beer.brewery))) {
+            brewList.push(beer.brewery);
+          }
+    });  //end filterName function
+    $("#brewery").autocomplete({
+        source:brewList
+    });
+});
+
+$(function () {
+    var styleList = [];
+    response.forEach(function(beer) {
+          if (!(styleList.includes(beer.beer_style))) {
+            styleList.push(beer.beer_style);
+          }
+    });  //end filterName function
+    $("#style").autocomplete({
+        source:styleList
+    });
+});
+
 style.on("change", filterStyle);  // If user searches by styl
 state.on("change", filterState);  // If user searches by state
 city.on("change", filterCity);  // If user searches by state

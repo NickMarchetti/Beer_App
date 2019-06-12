@@ -19,10 +19,10 @@ body {
 }
 
 .btn {
-  background:darkgoldenrod;
+  background:darkgoldenrod  ;
 }
 
-/* The footer is positioned at the bottom of the page */
+/*The footer is positioned at the bottom of the page  */
 .footer {
   position: absolute;
   right: 0;
@@ -31,7 +31,7 @@ body {
   color:black;
   min-height: 100px;
   background: darkgoldenrod;
-}
+} 
 
 /* The code styles the text at the bottom of the footer */
 .footer > .bottom {
@@ -56,7 +56,7 @@ body {
 .navbar-brand {
   background: darkgoldenrod;
 }
-/* This CSS styles the ufo icon in the navbar */
+/* This CSS styles the icon in the navbar */
 .beer {
   position: absolute;
   bottom: 5px;
@@ -207,21 +207,16 @@ select {
   width: 80%; /* Width of the outside container */
 }
 
-.ui-beer_name {
-  position: relative;
-  display: inline-block;
-  background-color: #f1f1f1;
-}
-
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
+.ui-autocomplete {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style-type: none;
+  overflow-x: auto;
+  width: 375px;
+  color:black;
+  background-color: white;
+    padding: 0px 0px 0px 10px;
 }
 
 .votescontainer {

@@ -215,7 +215,6 @@ d3.json(link).then(function(data) {
                 }
               }
             }
-
             layer = event.target;
             layer.bindTooltip("<h3>" + stateFullName + "</h3><br>Beers:  " + beerCount + "</h3><br>Breweries:  " + breweries.length).openTooltip();
             layer.setStyle({
@@ -229,6 +228,33 @@ d3.json(link).then(function(data) {
             fillOpacity: 0.5
           });
         },
+        click: function(event) {
+          var stateAbr;
+          var breweries = [];
+          map.fitBounds(event.target.getBounds());
+
+          d3.json(link).then(function(stuff) {
+            var markers = "";
+            markers = L.markerClusterGroup();
+            stateAbr = turnToAbr(feature.properties.name);
+
+            for (var i = 0; i < 1000; i++) {
+              if (stateAbr == response[i].brewery_state) {
+                if (!(breweries.includes(response[i].brewery))) {
+                  breweries.push(response[i]);
+                }
+              }            
+            }
+            for (var i = 0; i < breweries.length; i++) {
+              // Set the data location property to a variable
+              var location = breweries[i];
+              // Check for location property and add a new marker to the cluster group
+              console.log("Adding marker at:", location.brewery_city, ",", location.brewery_latitude, ",",location.brewery_longitude);
+              markers.addLayer(L.marker([location.brewery_latitude, location.brewery_longitude]).bindPopup(location.brewery));
+            }
+          map.addLayer(markers);
+        });
+        },
       });
     }
   }).addTo(map);
@@ -239,7 +265,7 @@ var link = "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/dat
 var url = "/data"; //assign all data to a temp variable so as not to edit data file1
 
 d3.json(url).then(function(response) {
-readData(response);
+  readData(response);
 });
 
 

@@ -3,6 +3,34 @@
   font-family: Ubuntu, sans-serif;
 }
 
+  #webpage {
+  /* The image used */
+  background-image: url("../img/splash-01.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  #button1 {
+    opacity: .4;
+    float: left;
+    height: 50px;
+    width: 100px;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+
 
   thead {
     display: table-header-group;
@@ -26,6 +54,16 @@
   .btn-primary:active,
   .btn-primary:visited {
     background-color: #FFFFFF !important;
+    opacity: .7;
+    height: 50px;
+    width: 150px;
+    border: none;
+    color: black;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
   }
 
   .btn-primary:hover {
@@ -73,6 +111,13 @@
   .navbar {
     background: rgb(74, 152, 211);
   }
+
+  /* #splash-nav {
+    background: rgb(255, 255, 255);
+    opacity: 0.3;
+  } */
+
+
 
 html,
 body {

@@ -47,6 +47,10 @@ def setup():
 # Create a route that renders index.html template
 @app.route("/")
 def home():
+    return render_template("splash.html")
+
+@app.route("/map")
+def map():
     return render_template("index.html")
 
 @app.route("/explore")

@@ -20,7 +20,7 @@ var layout = {
   paper_bgcolor: 'rgba(0,0,0,0)',
   plot_bgcolor: 'rgba(0,0,0,0)',
   autosize: true,
-  margin: {l: 0, r: 0, b: 5, t:5},
+  margin: {l: 0, r: 0, b: 10, t:10},
   extendsunburstcolorway: true,
   hovermode: false
 

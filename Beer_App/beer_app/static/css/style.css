@@ -63,7 +63,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .btn-primary:hover {
@@ -78,7 +78,7 @@
   }
 
   table {
-    height: 680px;
+    height: 700px;
     /* <-- Select the height of the table */
     display: -moz-groupbox;
     /* Firefox Bad Effect */
@@ -89,7 +89,7 @@
 
   tbody {
     overflow-y: scroll;
-    height: 600px;
+    height: 630px;
     width: 100%;
     position: absolute;
   }
@@ -110,7 +110,13 @@
 
   .navbar {
     background: rgb(74, 152, 211);
+
   }
+
+  .filters {
+    z-index: 10; /* <-- Added */
+  }
+
 
   /* #splash-nav {
     background: rgb(255, 255, 255);
@@ -236,22 +242,15 @@ select {
   color: #007dff;
 }
 
-/* The styles for the parallax */
-.hero {
-  position: relative;
-  height: 550px;
-  padding: 20px;
-  margin: 0;
-  background: black;
-  background-image: url("../img/brewery.jpg");
-  background-attachment: fixed;
-  background-position: bottom center;
-  background-size: cover;
-}
 
 #map-id {
-  height : 600px;
-  width : 1000px;
+  z-index: 0;
+}
+
+#sunburst-id {
+  height : 705px;
+  z-index: 2;
+}
 }
 
 .beer_map {
